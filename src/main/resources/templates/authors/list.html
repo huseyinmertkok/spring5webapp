@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8"/>
+  <title>Book List</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+</head>
+<body>
+<h1>Book List</h1>
+<table class="table table-stripped table-bordered">
+  <thead>
+  <tr>
+    <th>#</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+<!--    <th>Books</th>-->
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="author : ${authors}">
+    <td th:text="${author.id}"></td>
+    <td th:text="${author.firstName}"></td>
+    <td th:text="${author.lastName}"></td>
+<!--    <td th:text="${author.books}"></td>-->
+  </tr>
+  </tbody>
+</table>
+</body>
+</html>
